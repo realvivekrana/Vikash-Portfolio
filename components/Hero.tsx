@@ -16,7 +16,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2074)',
+            backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/Vikash-Portfolio' : ''}/hero-bg.jpg), url(https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2074)`,
           }}
         />
         <div className="absolute inset-0 bg-black/40" />

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Palette, Lightbulb, Award, Users } from 'lucide-react'
+import { getAssetPath } from '@/lib/utils'
 
 export default function About() {
   const ref = useRef(null)
@@ -31,7 +32,7 @@ export default function About() {
           >
             <div className="relative h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
               <img
-                src="/profile.jpg"
+                src={getAssetPath('/profile.jpg')}
                 alt="Vikash Rana - Interior Designer"
                 className="w-full h-full object-cover object-top"
                 style={{ objectPosition: 'center top' }}
