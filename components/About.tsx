@@ -22,31 +22,38 @@ export default function About() {
   return (
     <section id="about" className="section-padding bg-secondary dark:bg-gray-800" ref={ref}>
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center px-2 sm:px-0">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="relative order-2 md:order-1"
+            className="relative order-2 md:order-1 mx-auto w-full max-w-md md:max-w-none"
           >
-            <div className="relative h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
-              <img
-                src={getAssetPath('/profile.jpg')}
-                alt="Vikash Rana - Interior Designer"
-                className="w-full h-full object-cover object-top"
-                style={{ objectPosition: 'center top' }}
-              />
+            <div className="relative h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-700">
+              <div 
+                className="w-full h-full bg-cover bg-no-repeat"
+                style={{ 
+                  backgroundImage: `url(${getAssetPath('/profile.jpg')}), linear-gradient(135deg, #667eea 0%, #764ba2 100%)`,
+                  backgroundPosition: 'center 20%',
+                  backgroundSize: 'cover'
+                }}
+              >
+                {/* Fallback content if image doesn't load */}
+                <div className="w-full h-full flex items-center justify-center text-white text-6xl font-serif font-bold opacity-20">
+                  VR
+                </div>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-accent text-white p-6 sm:p-8 rounded-lg shadow-xl"
+              className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-accent text-white p-6 sm:p-8 rounded-lg shadow-xl z-10"
             >
               <div className="text-3xl sm:text-4xl font-bold">5+</div>
-              <div className="text-xs sm:text-sm">Years Experience</div>
+              <div className="text-xs sm:text-sm whitespace-nowrap">Years Experience</div>
             </motion.div>
           </motion.div>
 
