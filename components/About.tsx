@@ -20,31 +20,29 @@ export default function About() {
   const tools = ['AutoCAD', 'SketchUp', '3ds Max', 'V-Ray', 'Photoshop', 'Revit']
 
   return (
-    <section id="about" className="section-padding bg-secondary dark:bg-gray-800" ref={ref}>
-      <div className="container-custom">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center px-2 sm:px-0">
+    <section id="about" className="section-padding bg-secondary dark:bg-gray-800 overflow-hidden" ref={ref}>
+      <div className="container-custom max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="relative order-2 md:order-1 mx-auto w-full max-w-md md:max-w-none"
+            className="relative order-2 md:order-1 w-full"
           >
-            <div className="relative h-[450px] sm:h-[550px] md:h-[600px] lg:h-[650px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
-              <div 
-                className="w-full h-full bg-cover bg-no-repeat"
-                style={{ 
-                  backgroundImage: `url(${getAssetPath('/profile.jpg')})`,
-                  backgroundPosition: 'center center',
-                  backgroundSize: 'cover'
-                }}
-              >
-                {/* Overlay gradient for better text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                
-                {/* Decorative border */}
-                <div className="absolute inset-0 border-4 border-white/10 rounded-2xl" />
-              </div>
+            <div className="relative w-full h-[450px] sm:h-[550px] md:h-[600px] lg:h-[650px] max-w-lg mx-auto md:mx-0 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+              <img
+                src={getAssetPath('/profile.jpg')}
+                alt="Vikash Rana - Interior Designer"
+                className="w-full h-full object-cover object-center"
+                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+              />
+              
+              {/* Overlay gradient for better text contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              
+              {/* Decorative border */}
+              <div className="absolute inset-0 border-4 border-white/10 rounded-2xl pointer-events-none" />
             </div>
             
             {/* Experience Badge - More Attractive */}
@@ -52,10 +50,10 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 bg-gradient-to-br from-accent to-accent/80 text-white p-8 sm:p-10 rounded-2xl shadow-2xl z-10 border-4 border-white dark:border-gray-900"
+              className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 bg-gradient-to-br from-accent to-accent/80 text-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl z-10 border-4 border-white dark:border-gray-900"
             >
               <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold mb-1">5+</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1">5+</div>
                 <div className="text-xs sm:text-sm font-medium tracking-wider uppercase">Years</div>
                 <div className="text-xs sm:text-sm font-medium tracking-wider uppercase">Experience</div>
               </div>
@@ -66,13 +64,13 @@ export default function About() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
-              className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"
+              className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl pointer-events-none"
             />
             <motion.div
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.6 }}
-              className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 rounded-full blur-3xl"
+              className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 rounded-full blur-3xl pointer-events-none"
             />
           </motion.div>
 

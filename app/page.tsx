@@ -33,7 +33,7 @@ export default function Home() {
       </AnimatePresence>
 
       {!isLoading && (
-        <main className="overflow-x-hidden">
+        <main className="overflow-x-hidden w-full">
           <Navbar />
           <Hero />
           <About />
