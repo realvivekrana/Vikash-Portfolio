@@ -34,8 +34,11 @@ export default function About() {
               <img
                 src={getAssetPath('/profile.jpg')}
                 alt="Vikash Rana - Interior Designer"
-                className="w-full h-full object-cover object-center"
-                style={{ objectFit: 'cover', objectPosition: 'center center' }}
+                className="w-full h-full"
+                style={{ 
+                  objectFit: 'cover', 
+                  objectPosition: 'center 30%'
+                }}
               />
               
               {/* Overlay gradient for better text contrast */}
