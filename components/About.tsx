@@ -30,31 +30,50 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative order-2 md:order-1 mx-auto w-full max-w-md md:max-w-none"
           >
-            <div className="relative h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-700">
+            <div className="relative h-[450px] sm:h-[550px] md:h-[600px] lg:h-[650px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
               <div 
                 className="w-full h-full bg-cover bg-no-repeat"
                 style={{ 
-                  backgroundImage: `url(${getAssetPath('/profile.jpg')}), linear-gradient(135deg, #667eea 0%, #764ba2 100%)`,
-                  backgroundPosition: 'center 20%',
+                  backgroundImage: `url(${getAssetPath('/profile.jpg')})`,
+                  backgroundPosition: 'center center',
                   backgroundSize: 'cover'
                 }}
               >
-                {/* Fallback content if image doesn't load */}
-                <div className="w-full h-full flex items-center justify-center text-white text-6xl font-serif font-bold opacity-20">
-                  VR
-                </div>
+                {/* Overlay gradient for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                
+                {/* Decorative border */}
+                <div className="absolute inset-0 border-4 border-white/10 rounded-2xl" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
+            
+            {/* Experience Badge - More Attractive */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-accent text-white p-6 sm:p-8 rounded-lg shadow-xl z-10"
+              className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 bg-gradient-to-br from-accent to-accent/80 text-white p-8 sm:p-10 rounded-2xl shadow-2xl z-10 border-4 border-white dark:border-gray-900"
             >
-              <div className="text-3xl sm:text-4xl font-bold">5+</div>
-              <div className="text-xs sm:text-sm whitespace-nowrap">Years Experience</div>
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold mb-1">5+</div>
+                <div className="text-xs sm:text-sm font-medium tracking-wider uppercase">Years</div>
+                <div className="text-xs sm:text-sm font-medium tracking-wider uppercase">Experience</div>
+              </div>
             </motion.div>
+            
+            {/* Decorative Elements */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.5 }}
+              className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"
+            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.6 }}
+              className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 rounded-full blur-3xl"
+            />
           </motion.div>
 
           {/* Content */}
