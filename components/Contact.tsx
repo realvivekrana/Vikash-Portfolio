@@ -23,13 +23,13 @@ export default function Contact() {
   }
 
   const contactInfo = [
-    { icon: Phone, title: 'Phone', value: '+91 98765 43210', link: 'tel:+919876543210' },
+    { icon: Phone, title: 'Phone', value: '+91 6207634535', link: 'tel:+916207634535' },
     { icon: Mail, title: 'Email', value: 'hello@vikashrana.com', link: 'mailto:hello@vikashrana.com' },
     { icon: MapPin, title: 'Location', value: 'Gurgaon, Haryana, India', link: '#' },
   ]
 
   const socialLinks = [
-    { icon: Instagram, link: 'https://instagram.com', label: 'Instagram' },
+    { icon: Instagram, link: 'https://www.instagram.com/vikash_kr_rana_26?igsh=czY4Y2kzN3g0N2o3&utm_source=qr', label: 'Instagram' },
     { icon: Linkedin, link: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: Facebook, link: 'https://facebook.com', label: 'Facebook' },
   ]

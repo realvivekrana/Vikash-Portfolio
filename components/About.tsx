@@ -17,7 +17,7 @@ export default function About() {
     { icon: Users, name: 'Client Focus', description: '40+ happy clients' },
   ]
 
-  const tools = ['AutoCAD', 'SketchUp', '3ds Max', 'V-Ray', 'Photoshop', 'Revit']
+  const tools = ['AutoCAD', 'SketchUp', 'V-Ray', 'D5 Render', 'Photoshop', 'Lumion']
 
   return (
     <section id="about" className="py-16 md:py-24 overflow-hidden" ref={ref}>

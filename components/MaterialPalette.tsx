@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
+import { getAssetPath } from '@/lib/utils'
 
 const materials = [
   { name: 'Warm Oak',     hex: '#8B6914', type: 'Wood'   },
@@ -13,27 +14,27 @@ const materials = [
   { name: 'Marble Grey',  hex: '#C8C8C8', type: 'Stone',  border: true },
 ]
 
-// Verified working Unsplash images - using popular well-known photo IDs
+// Real project renders used as material showcase
 const textures = [
   {
-    name: 'Italian Marble',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=600&auto=format&fit=crop',
-    desc: 'Premium Calacatta Marble',
+    name: 'Wood Panelling',
+    image: getAssetPath('/DINING WALL DESIGN RIV.png'),
+    desc: 'Premium Veneer & Wood Finish',
   },
   {
-    name: 'Engineered Oak',
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=600&auto=format&fit=crop',
-    desc: 'European White Oak',
+    name: 'Marble & Stone',
+    image: getAssetPath('/LOBBY 4.png'),
+    desc: 'Italian Marble & Stone Cladding',
   },
   {
-    name: 'Velvet Fabric',
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=600&auto=format&fit=crop',
-    desc: 'Belgian Linen & Velvet',
+    name: 'Velvet & Fabric',
+    image: getAssetPath('/M.B.R BED VIEW.png'),
+    desc: 'Belgian Linen & Velvet Upholstery',
   },
   {
-    name: 'Brass Fixtures',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop',
-    desc: 'Antique Brushed Brass',
+    name: 'Brass & Metal',
+    image: getAssetPath('/MANDIR VIEW NEW PHOTOSHOP.png'),
+    desc: 'Brushed Brass & Gold Fixtures',
   },
 ]
 

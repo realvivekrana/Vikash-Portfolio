@@ -4,19 +4,20 @@ import { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, MapPin, Award, Star } from 'lucide-react'
 import { AnimatePresence } from 'framer-motion'
+import { getAssetPath } from '@/lib/utils'
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=90&w=2074',
-    label: 'Modern Living',
+    image: getAssetPath('/FULL LOBBY PHOTOSHOP.png'),
+    label: 'Luxury Lobby',
   },
   {
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=90&w=2070',
-    label: 'Luxury Bedroom',
+    image: getAssetPath('/DINING AREA.png'),
+    label: 'Premium Dining',
   },
   {
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=90&w=2070',
-    label: 'Premium Spaces',
+    image: getAssetPath('/M.B.R BED VIEW.png'),
+    label: 'Master Bedroom',
   },
 ]
 

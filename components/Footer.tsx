@@ -23,7 +23,7 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Instagram, link: 'https://instagram.com', label: 'Instagram' },
+    { icon: Instagram, link: 'https://www.instagram.com/vikash_kr_rana_26?igsh=czY4Y2kzN3g0N2o3&utm_source=qr', label: 'Instagram' },
     { icon: Linkedin, link: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: Facebook, link: 'https://facebook.com', label: 'Facebook' },
   ]
@@ -76,7 +76,7 @@ export default function Footer() {
               <h4 className="font-semibold mb-4 text-xs uppercase tracking-widest text-gray-400">Contact</h4>
               <ul className="space-y-2 sm:space-y-3 text-sm text-gray-400">
                 <li>Gurgaon, Haryana, India</li>
-                <li><a href="tel:+919876543210" className="hover:text-accent transition-colors">+91 98765 43210</a></li>
+                <li><a href="tel:+916207634535" className="hover:text-accent transition-colors">+91 6207634535</a></li>
                 <li><a href="mailto:hello@vikashrana.com" className="hover:text-accent transition-colors break-all">hello@vikashrana.com</a></li>
               </ul>
             </div>
