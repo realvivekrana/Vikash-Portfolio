@@ -30,27 +30,27 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-gray-950 text-white pt-16 pb-8">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-4 gap-10 mb-12">
-            {/* Brand */}
-            <div className="md:col-span-2">
+      <footer className="bg-gray-950 text-white pt-12 sm:pt-16 pb-6 sm:pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
+            {/* Brand — full width on mobile */}
+            <div className="sm:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                  <span className="text-white font-serif font-bold text-lg">VR</span>
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-accent flex items-center justify-center">
+                  <span className="text-white font-serif font-bold text-base sm:text-lg">VR</span>
                 </div>
-                <span className="text-2xl font-serif font-bold">VIKASH RANA</span>
+                <span className="text-xl sm:text-2xl font-serif font-bold">VIKASH RANA</span>
               </div>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-sm">
+              <p className="text-gray-400 mb-5 sm:mb-6 leading-relaxed max-w-sm text-sm">
                 Premium interior design services creating timeless, luxurious spaces in Gurgaon and across the NCR region.
               </p>
               <div className="flex gap-3">
                 {socialLinks.map(s => (
                   <a key={s.label} href={s.link} target="_blank" rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/5 hover:bg-accent rounded-full flex items-center justify-center transition-colors"
+                    className="w-9 h-9 sm:w-10 sm:h-10 bg-white/5 hover:bg-accent rounded-full flex items-center justify-center transition-colors"
                     aria-label={s.label}
                   >
-                    <s.icon size={18} />
+                    <s.icon size={17} />
                   </a>
                 ))}
               </div>
@@ -58,13 +58,11 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gray-400">Quick Links</h4>
+              <h4 className="font-semibold mb-4 text-xs uppercase tracking-widest text-gray-400">Quick Links</h4>
               <ul className="space-y-2">
                 {quickLinks.map(link => (
                   <li key={link.name}>
-                    <a href={link.href}
-                      className="text-gray-400 hover:text-accent transition-colors text-sm flex items-center gap-2 group"
-                    >
+                    <a href={link.href} className="text-gray-400 hover:text-accent transition-colors text-sm flex items-center gap-2 group">
                       <span className="w-0 h-0.5 bg-accent group-hover:w-3 transition-all" />
                       {link.name}
                     </a>
@@ -75,23 +73,26 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gray-400">Contact</h4>
-              <ul className="space-y-3 text-sm text-gray-400">
+              <h4 className="font-semibold mb-4 text-xs uppercase tracking-widest text-gray-400">Contact</h4>
+              <ul className="space-y-2 sm:space-y-3 text-sm text-gray-400">
                 <li>Gurgaon, Haryana, India</li>
                 <li><a href="tel:+919876543210" className="hover:text-accent transition-colors">+91 98765 43210</a></li>
-                <li><a href="mailto:hello@vikashrana.com" className="hover:text-accent transition-colors">hello@vikashrana.com</a></li>
+                <li><a href="mailto:hello@vikashrana.com" className="hover:text-accent transition-colors break-all">hello@vikashrana.com</a></li>
               </ul>
             </div>
           </div>
 
           {/* Bottom bar */}
-          <div className="border-t border-white/5 pt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500">
+          <div className="border-t border-white/5 pt-6 sm:pt-8">
+            <div className="flex flex-col items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-500 text-center">
               <p>&copy; {new Date().getFullYear()} Vikash Rana Interior Design. All rights reserved.</p>
-              <div className="flex items-center gap-2">
-                <span>Portfolio Website Designed by</span>
-                <a href="https://realvivekrana.github.io/vivek-portfolio/" target="_blank" rel="noopener noreferrer"
-                  className="text-accent hover:text-accent/80 font-medium transition-colors"
+              <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
+                <span>Portfolio Website Designed & Developed by</span>
+                <a
+                  href="https://portfolio-vivek-blue.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-accent/80 font-semibold transition-colors underline underline-offset-2"
                 >
                   Vivek Kumar Rana ↗
                 </a>

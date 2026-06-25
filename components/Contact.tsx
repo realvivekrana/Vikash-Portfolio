@@ -35,28 +35,23 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="section-padding bg-secondary dark:bg-gray-900" ref={ref}>
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          className="text-center mb-16"
-        >
-          <p className="text-accent tracking-[0.3em] text-sm font-medium uppercase mb-3">Get In Touch</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Start Your Project</h2>
-          <div className="w-20 h-0.5 bg-accent mx-auto mb-6" />
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+    <section id="contact" className="py-16 md:py-24 bg-secondary dark:bg-gray-900" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} className="text-center mb-10 md:mb-16">
+          <p className="text-accent tracking-[0.3em] text-xs sm:text-sm font-medium uppercase mb-3">Get In Touch</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">Start Your Project</h2>
+          <div className="w-16 sm:w-20 h-0.5 bg-accent mx-auto mb-4 sm:mb-6" />
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
             Let's create something extraordinary together. Reach out to schedule a free consultation.
           </p>
         </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg"
+            className="bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-8 shadow-lg"
           >
             {submitted ? (
               <motion.div

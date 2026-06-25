@@ -40,22 +40,17 @@ export default function Blog() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="blog" className="section-padding bg-secondary dark:bg-gray-800" ref={ref}>
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          className="text-center mb-16"
-        >
-          <p className="text-accent tracking-[0.3em] text-sm font-medium uppercase mb-3">Insights</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">Design Journal</h2>
-          <div className="w-20 h-0.5 bg-accent mx-auto mb-6" />
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+    <section id="blog" className="py-16 md:py-24 bg-secondary dark:bg-gray-800" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} className="text-center mb-10 md:mb-16">
+          <p className="text-accent tracking-[0.3em] text-xs sm:text-sm font-medium uppercase mb-3">Insights</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">Design Journal</h2>
+          <div className="w-16 sm:w-20 h-0.5 bg-accent mx-auto mb-4 sm:mb-6" />
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
             Thoughts, insights, and inspiration from the world of interior design
           </p>
         </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {posts.map((post, index) => (
             <motion.article
               key={post.id}

@@ -17,23 +17,32 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  /* Prevent anything from breaking layout */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28;
   }
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   .btn-primary {
-    @apply px-8 py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent/80 transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 hover:scale-105;
+    @apply px-6 sm:px-8 py-3 sm:py-4 bg-accent text-white font-semibold rounded-xl hover:bg-accent/80 transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 hover:scale-105 text-sm sm:text-base;
   }
   .btn-outline {
-    @apply px-8 py-4 border-2 border-accent text-accent font-semibold rounded-xl hover:bg-accent hover:text-white transition-all duration-300;
+    @apply px-6 sm:px-8 py-3 sm:py-4 border-2 border-accent text-accent font-semibold rounded-xl hover:bg-accent hover:text-white transition-all duration-300 text-sm sm:text-base;
   }
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
@@ -41,13 +50,10 @@
 }
 
 /* Custom scrollbar */
-::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { @apply bg-gray-100 dark:bg-gray-900; }
 ::-webkit-scrollbar-thumb { @apply bg-accent/50 rounded-full; }
 ::-webkit-scrollbar-thumb:hover { @apply bg-accent; }
-
-/* Smooth image rendering */
-img { image-rendering: -webkit-optimize-contrast; }
 
 /* Selection */
 ::selection { @apply bg-accent/30; }

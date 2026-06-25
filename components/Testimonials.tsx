@@ -34,42 +34,30 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="section-padding" ref={ref}>
-      <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          className="text-center mb-16"
-        >
-          <p className="text-accent tracking-[0.3em] text-sm font-medium uppercase mb-3">Clients</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">What They Say</h2>
-          <div className="w-20 h-0.5 bg-accent mx-auto" />
+    <section className="py-16 md:py-24" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} className="text-center mb-10 md:mb-16">
+          <p className="text-accent tracking-[0.3em] text-xs sm:text-sm font-medium uppercase mb-3">Clients</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">What They Say</h2>
+          <div className="w-16 sm:w-20 h-0.5 bg-accent mx-auto" />
         </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: i * 0.15 }}
-              className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700"
+            <motion.div key={t.name} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: i * 0.15 }}
+              className="relative bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700"
             >
-              <Quote className="absolute top-6 right-6 text-accent/10" size={52} />
-              <div className="flex items-center gap-4 mb-6">
-                <img src={t.image} alt={t.name}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-accent/20" />
+              <Quote className="absolute top-5 right-5 text-accent/10" size={44} />
+              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <img src={t.image} alt={t.name} className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover ring-2 ring-accent/20 flex-shrink-0" />
                 <div>
-                  <p className="font-bold">{t.name}</p>
-                  <p className="text-sm text-gray-500">{t.role}</p>
+                  <p className="font-bold text-sm sm:text-base">{t.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-500">{t.role}</p>
                 </div>
               </div>
-              <div className="flex gap-1 mb-4">
-                {[...Array(t.rating)].map((_, j) => (
-                  <Star key={j} className="text-accent fill-accent" size={16} />
-                ))}
+              <div className="flex gap-1 mb-3 sm:mb-4">
+                {[...Array(t.rating)].map((_, j) => <Star key={j} className="text-accent fill-accent" size={14} />)}
               </div>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">"{t.text}"</p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-xs sm:text-sm">"{t.text}"</p>
             </motion.div>
           ))}
         </div>
