@@ -16,22 +16,22 @@ const materials = [
 const textures = [
   {
     name: 'Italian Marble',
-    image: 'https://images.unsplash.com/photo-1615971677499-5467cbab01bc?q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=600',
     desc: 'Premium Calacatta Marble',
   },
   {
     name: 'Engineered Oak',
-    image: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=600',
     desc: 'European White Oak',
   },
   {
     name: 'Velvet Fabric',
-    image: 'https://images.unsplash.com/photo-1558171813-2e0fdb5c70dd?q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=600',
     desc: 'Belgian Linen & Velvet',
   },
   {
     name: 'Brass Fixtures',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4a2b9b?q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=600',
     desc: 'Antique Brushed Brass',
   },
 ]
@@ -102,11 +102,17 @@ export default function MaterialPalette() {
                   whileHover={{ scale: 1.03 }}
                   className="group overflow-hidden rounded-2xl shadow-lg"
                 >
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative h-40 overflow-hidden bg-gray-100 dark:bg-gray-800">
                     <img
                       src={texture.image}
                       alt={texture.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement
+                        target.style.display = 'none'
+                        target.parentElement!.classList.add('bg-gradient-to-br', 'from-gray-200', 'to-gray-300', 'dark:from-gray-700', 'dark:to-gray-800')
+                      }}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                   </div>
