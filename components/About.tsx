@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Palette, Lightbulb, Award, Users } from 'lucide-react'
+import { Palette, Lightbulb, Award, Users, MapPin } from 'lucide-react'
 import { getAssetPath } from '@/lib/utils'
 
 export default function About() {
@@ -13,110 +13,98 @@ export default function About() {
   const skills = [
     { icon: Palette, name: 'Creative Design', description: '5+ years experience' },
     { icon: Lightbulb, name: 'Innovation', description: 'Modern solutions' },
-    { icon: Award, name: 'Excellence', description: 'Award winning' },
-    { icon: Users, name: 'Client Focus', description: '50+ happy clients' },
+    { icon: Award, name: 'Excellence', description: 'Award-winning work' },
+    { icon: Users, name: 'Client Focus', description: '40+ happy clients' },
   ]
 
   const tools = ['AutoCAD', 'SketchUp', '3ds Max', 'V-Ray', 'Photoshop', 'Revit']
 
   return (
-    <section id="about" className="section-padding bg-secondary dark:bg-gray-800 overflow-hidden" ref={ref}>
+    <section id="about" className="section-padding overflow-hidden" ref={ref}>
       <div className="container-custom max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
-          {/* Image */}
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="relative order-2 md:order-1 w-full"
           >
-            <div className="relative w-full h-[450px] sm:h-[550px] md:h-[600px] lg:h-[650px] max-w-lg mx-auto md:mx-0 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+            {/* Gold accent border behind image */}
+            <div className="absolute top-6 left-6 right-0 bottom-0 rounded-2xl border-2 border-accent/30 z-0" />
+
+            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-2xl overflow-hidden shadow-2xl z-10"
+              style={{ height: '520px' }}>
               <img
                 src={getAssetPath('/profile.jpg')}
                 alt="Vikash Rana - Interior Designer"
                 className="w-full h-full"
-                style={{ 
-                  objectFit: 'cover', 
-                  objectPosition: 'center 30%'
-                }}
+                style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
               />
-              
-              {/* Overlay gradient for better text contrast */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              
-              {/* Decorative border */}
-              <div className="absolute inset-0 border-4 border-white/10 rounded-2xl pointer-events-none" />
             </div>
-            
-            {/* Experience Badge - More Attractive */}
+
+            {/* Experience Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 bg-gradient-to-br from-accent to-accent/80 text-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl z-10 border-4 border-white dark:border-gray-900"
+              transition={{ delay: 0.4, type: 'spring', stiffness: 200 }}
+              className="absolute bottom-6 right-0 md:-right-6 bg-accent text-white px-6 py-5 rounded-2xl shadow-2xl z-20 border-4 border-white dark:border-gray-900"
             >
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1">5+</div>
-                <div className="text-xs sm:text-sm font-medium tracking-wider uppercase">Years</div>
-                <div className="text-xs sm:text-sm font-medium tracking-wider uppercase">Experience</div>
-              </div>
+              <div className="text-4xl font-serif font-bold">5+</div>
+              <div className="text-xs uppercase tracking-widest mt-1">Years Exp.</div>
             </motion.div>
-            
-            {/* Decorative Elements */}
+
+            {/* Location tag */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
-              className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl pointer-events-none"
-            />
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.6 }}
-              className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 rounded-full blur-3xl pointer-events-none"
-            />
+              className="absolute top-6 right-0 md:-right-4 bg-white dark:bg-gray-900 px-4 py-2 rounded-full shadow-lg z-20 flex items-center gap-2"
+            >
+              <MapPin size={14} className="text-accent" />
+              <span className="text-xs font-medium">Gurgaon, Haryana</span>
+            </motion.div>
           </motion.div>
 
-          {/* Content */}
+          {/* Content Column */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             className="order-1 md:order-2"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4 sm:mb-6">
-              About Me
+            <p className="text-accent tracking-[0.3em] text-sm font-medium uppercase mb-3">About Me</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-2 leading-tight">
+              Vikash Rana
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-accent mb-6 sm:mb-8" />
-            
-            <p className="text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-              Hi, I'm <span className="font-semibold text-accent">Vikash Rana</span>, an interior designer 
-              based in Gurgaon, Haryana, with over 5 years of experience in creating sophisticated spaces 
-              that reflect the unique personality and lifestyle of each client. My approach combines timeless 
-              elegance with contemporary functionality.
+            <p className="text-gray-500 dark:text-gray-400 font-medium mb-6">Interior Designer & Space Planner</p>
+            <div className="w-16 h-0.5 bg-accent mb-8" />
+
+            <p className="text-gray-700 dark:text-gray-300 mb-5 leading-relaxed">
+              With over 5 years of experience creating luxury residential and commercial spaces in the NCR region, I bring a refined eye for detail and a deep passion for transforming ordinary spaces into extraordinary living experiences.
             </p>
-            
-            <p className="text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
-              Every project is an opportunity to transform spaces into beautiful, livable works of art. 
-              I believe in the power of thoughtful design to enhance daily life and create lasting impressions.
+            <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+              My design philosophy is rooted in the belief that great interiors tell a story — your story. I balance timeless elegance with contemporary functionality to create spaces that are as beautiful as they are liveable.
             </p>
 
-            {/* Skills Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-              {skills.map((skill, index) => (
+            {/* Skills */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {skills.map((skill, i) => (
                 <motion.div
                   key={skill.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.2 + index * 0.1 }}
-                  className="flex items-start space-x-3"
+                  transition={{ delay: 0.3 + i * 0.1 }}
+                  className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700"
                 >
                   <div className="p-2 bg-accent/10 rounded-lg flex-shrink-0">
-                    <skill.icon className="text-accent" size={20} />
+                    <skill.icon size={18} className="text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm">{skill.name}</h4>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">{skill.description}</p>
+                    <p className="font-semibold text-sm">{skill.name}</p>
+                    <p className="text-xs text-gray-500">{skill.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -124,15 +112,15 @@ export default function About() {
 
             {/* Tools */}
             <div>
-              <h4 className="font-semibold mb-3 text-sm sm:text-base">Software & Tools</h4>
+              <p className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-3">Software & Tools</p>
               <div className="flex flex-wrap gap-2">
-                {tools.map((tool, index) => (
+                {tools.map((tool, i) => (
                   <motion.span
                     key={tool}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.4 + index * 0.05 }}
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white dark:bg-gray-700 rounded-full text-xs sm:text-sm font-medium shadow-sm"
+                    transition={{ delay: 0.5 + i * 0.05 }}
+                    className="px-4 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-700"
                   >
                     {tool}
                   </motion.span>
