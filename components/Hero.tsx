@@ -8,15 +8,15 @@ import { getAssetPath } from '@/lib/utils'
 
 const slides = [
   {
-    image: getAssetPath('/FULL LOBBY PHOTOSHOP.png'),
+    image: getAssetPath('/FULL LOBBY PHOTOSHOP.jpg'),
     label: 'Luxury Lobby',
   },
   {
-    image: getAssetPath('/DINING AREA.png'),
+    image: getAssetPath('/DINING AREA.jpg'),
     label: 'Premium Dining',
   },
   {
-    image: getAssetPath('/M.B.R BED VIEW.png'),
+    image: getAssetPath('/M.B.R BED VIEW.jpg'),
     label: 'Master Bedroom',
   },
 ]
@@ -306,3 +306,4 @@ function AnimatedWord({ word }: { word: string }) {
     </motion.h1>
   )
 }
+

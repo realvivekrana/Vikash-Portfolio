@@ -18,22 +18,22 @@ const materials = [
 const textures = [
   {
     name: 'Wood Panelling',
-    image: getAssetPath('/DINING WALL DESIGN RIV.png'),
+    image: getAssetPath('/DINING WALL DESIGN RIV.jpg'),
     desc: 'Premium Veneer & Wood Finish',
   },
   {
     name: 'Marble & Stone',
-    image: getAssetPath('/LOBBY 4.png'),
+    image: getAssetPath('/LOBBY 4.jpg'),
     desc: 'Italian Marble & Stone Cladding',
   },
   {
     name: 'Velvet & Fabric',
-    image: getAssetPath('/M.B.R BED VIEW.png'),
+    image: getAssetPath('/M.B.R BED VIEW.jpg'),
     desc: 'Belgian Linen & Velvet Upholstery',
   },
   {
     name: 'Brass & Metal',
-    image: getAssetPath('/MANDIR VIEW NEW PHOTOSHOP.png'),
+    image: getAssetPath('/MANDIR VIEW NEW PHOTOSHOP.jpg'),
     desc: 'Brushed Brass & Gold Fixtures',
   },
 ]
@@ -149,3 +149,4 @@ export default function MaterialPalette() {
     </section>
   )
 }
+

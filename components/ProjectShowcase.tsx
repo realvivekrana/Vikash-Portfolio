@@ -23,7 +23,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'FULL LOBBY PHOTOSHOP.png',
+    image: 'FULL LOBBY PHOTOSHOP.jpg',
     tags: ['Lobby', 'Luxury', 'Feature Wall'],
   },
   {
@@ -32,7 +32,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'lobby wall design.png',
+    image: 'lobby wall design.jpg',
     tags: ['Wall Design', 'Lobby', 'POP'],
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'LOBBY 4.png',
+    image: 'LOBBY 4.jpg',
     tags: ['Lobby', 'Lighting', 'Marble'],
   },
   {
@@ -50,7 +50,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'DINING AREA.png',
+    image: 'DINING AREA.jpg',
     tags: ['Dining', 'Wood Work', 'Lighting'],
   },
   {
@@ -59,7 +59,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'DINING WALL DESIGN RIV.png',
+    image: 'DINING WALL DESIGN RIV.jpg',
     tags: ['Feature Wall', 'Dining', 'Veneer'],
   },
   {
@@ -68,7 +68,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'M.B.R BED VIEW.png',
+    image: 'M.B.R BED VIEW.jpg',
     tags: ['Master Bedroom', 'Luxury', 'Bed Design'],
   },
   {
@@ -77,7 +77,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'MASTER DRESSER.png',
+    image: 'MASTER DRESSER.jpg',
     tags: ['Dresser', 'Vanity', 'Bedroom'],
   },
   {
@@ -86,7 +86,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'MASTER WARDROBE riv.png',
+    image: 'MASTER WARDROBE riv.jpg',
     tags: ['Wardrobe', 'Wood Work', 'Storage'],
   },
   {
@@ -95,7 +95,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'GUEST BED WALL.png',
+    image: 'GUEST BED WALL.jpg',
     tags: ['Guest Room', 'Feature Wall', 'Luxury'],
   },
   {
@@ -104,7 +104,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'guest room wardrobe3.png',
+    image: 'guest room wardrobe3.jpg',
     tags: ['Wardrobe', 'Guest Room', 'Storage'],
   },
   {
@@ -113,7 +113,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'GUEST WALL VIEW.png',
+    image: 'GUEST WALL VIEW.jpg',
     tags: ['Guest Room', 'Panelling', 'Design'],
   },
   {
@@ -122,7 +122,7 @@ const projects: Project[] = [
     category: 'Kids Room',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'KIDS ROOM RIV NEW.png',
+    image: 'KIDS ROOM RIV NEW.jpg',
     tags: ['Kids Room', 'Playful', 'Colorful'],
   },
   {
@@ -131,7 +131,7 @@ const projects: Project[] = [
     category: 'Kids Room',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'KIDS BED VIEW 2.png',
+    image: 'KIDS BED VIEW 2.jpg',
     tags: ['Kids Bed', 'Storage', 'Fun Design'],
   },
   {
@@ -140,7 +140,7 @@ const projects: Project[] = [
     category: 'Kids Room',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'KIDS WARDROBE.png',
+    image: 'KIDS WARDROBE.jpg',
     tags: ['Kids Wardrobe', 'Storage', 'Colorful'],
   },
   {
@@ -149,7 +149,7 @@ const projects: Project[] = [
     category: 'TV Panel',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'TV.png',
+    image: 'TV.jpg',
     tags: ['TV Panel', 'Feature Wall', 'Entertainment'],
   },
   {
@@ -158,7 +158,7 @@ const projects: Project[] = [
     category: 'Mandir',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'MANDIR VIEW NEW PHOTOSHOP.png',
+    image: 'MANDIR VIEW NEW PHOTOSHOP.jpg',
     tags: ['Mandir', 'Pooja Unit', 'Wood Work'],
   },
   {
@@ -167,7 +167,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'CROCKERY.png',
+    image: 'CROCKERY.jpg',
     tags: ['Crockery', 'Modular', 'Display'],
   },
   {
@@ -176,7 +176,7 @@ const projects: Project[] = [
     category: 'Bedroom',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'WARDROBE N882.png',
+    image: 'WARDROBE N882.jpg',
     tags: ['Wardrobe', 'Wood Work', 'Custom'],
   },
   {
@@ -185,7 +185,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'VIEW 2.png',
+    image: 'VIEW 2.jpg',
     tags: ['Living Room', 'Luxury', 'Open Plan'],
   },
   {
@@ -194,7 +194,7 @@ const projects: Project[] = [
     category: 'Residential',
     location: 'Gurgaon, Haryana',
     year: '2025',
-    image: 'Scene 40.png',
+    image: 'Scene 40.jpg',
     tags: ['3D Design', 'D5 Render', 'Living'],
   },
 ]
@@ -337,3 +337,4 @@ export default function ProjectShowcase() {
     </section>
   )
 }
+
