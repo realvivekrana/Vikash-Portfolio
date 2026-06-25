@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Vikash Rana - Interior Designer Portfolio',
-  description: 'Premium interior design services for residential and commercial spaces by Vikash Rana',
-  keywords: 'interior design, luxury interiors, residential design, commercial design, vikash rana',
+  title: 'Vikash Kumar Rana — Interior Designer | Gurgaon',
+  description: 'Premium interior design services for residential and commercial spaces by Vikash Kumar Rana — Gurgaon, Haryana',
+  keywords: 'interior design, luxury interiors, residential design, commercial design, Vikash Kumar Rana, Gurgaon',
 }
 
 export default function RootLayout({
@@ -18,3 +18,4 @@ export default function RootLayout({
     </html>
   )
 }
+

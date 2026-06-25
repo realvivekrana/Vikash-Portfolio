@@ -36,7 +36,7 @@ export default function About() {
               style={{ height: 'clamp(320px, 55vw, 520px)' }}>
               <img
                 src={getAssetPath('/profile.jpg')}
-                alt="Vikash Rana - Interior Designer"
+                alt="Vikash Kumar Rana - Interior Designer"
                 className="w-full h-full"
                 style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
               />
@@ -75,7 +75,7 @@ export default function About() {
           >
             <p className="text-accent tracking-[0.25em] sm:tracking-[0.3em] text-xs sm:text-sm font-medium uppercase mb-2 sm:mb-3">About Me</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-1 sm:mb-2 leading-tight">
-              Vikash Rana
+              Vikash Kumar Rana
             </h2>
             <p className="text-gray-500 dark:text-gray-400 font-medium text-sm sm:text-base mb-4 sm:mb-6">
               Interior Designer & Space Planner
@@ -135,3 +135,4 @@ export default function About() {
     </section>
   )
 }
+

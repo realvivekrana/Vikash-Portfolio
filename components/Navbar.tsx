@@ -79,14 +79,14 @@ export default function Navbar() {
               <div className="relative w-10 h-10">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent to-yellow-600 rounded-xl shadow-lg shadow-accent/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white font-serif font-bold text-[17px] tracking-tight">VR</span>
+                  <span className="text-white font-serif font-bold text-[17px] tracking-tight">VK</span>
                 </div>
               </div>
               <div className="hidden sm:flex flex-col leading-none">
                 <span className={`text-[15px] font-serif font-bold tracking-[0.15em] transition-colors duration-300 ${
                   scrolled ? 'text-gray-900 dark:text-white' : 'text-white'
                 }`}>
-                  VIKASH RANA
+                  VIKASH KUMAR RANA
                 </span>
                 <span className={`text-[9px] tracking-[0.35em] uppercase font-medium transition-colors duration-300 ${
                   scrolled ? 'text-accent' : 'text-white/60'
@@ -219,9 +219,9 @@ export default function Navbar() {
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-gray-100 dark:border-gray-800">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                    <span className="text-white font-serif font-bold text-sm">VR</span>
+                    <span className="text-white font-serif font-bold text-sm">VK</span>
                   </div>
-                  <span className="font-serif font-bold text-sm tracking-widest text-gray-900 dark:text-white">VIKASH RANA</span>
+                  <span className="font-serif font-bold text-sm tracking-widest text-gray-900 dark:text-white">VIKASH KUMAR RANA</span>
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -284,3 +284,4 @@ export default function Navbar() {
     </>
   )
 }
+

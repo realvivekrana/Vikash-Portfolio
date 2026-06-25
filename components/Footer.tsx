@@ -37,9 +37,9 @@ export default function Footer() {
             <div className="sm:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-accent flex items-center justify-center">
-                  <span className="text-white font-serif font-bold text-base sm:text-lg">VR</span>
+                  <span className="text-white font-serif font-bold text-base sm:text-lg">VK</span>
                 </div>
-                <span className="text-xl sm:text-2xl font-serif font-bold">VIKASH RANA</span>
+                <span className="text-xl sm:text-2xl font-serif font-bold">VIKASH KUMAR RANA</span>
               </div>
               <p className="text-gray-400 mb-5 sm:mb-6 leading-relaxed max-w-sm text-sm">
                 Premium interior design services creating timeless, luxurious spaces in Gurgaon and across the NCR region.
@@ -85,7 +85,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="border-t border-white/5 pt-6 sm:pt-8">
             <div className="flex flex-col items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-500 text-center">
-              <p>&copy; {new Date().getFullYear()} Vikash Rana Interior Design. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Vikash Kumar Rana Interior Design. All rights reserved.</p>
               <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2">
                 <span>Portfolio Website Designed & Developed by</span>
                 <a
@@ -117,3 +117,4 @@ export default function Footer() {
     </>
   )
 }
+
